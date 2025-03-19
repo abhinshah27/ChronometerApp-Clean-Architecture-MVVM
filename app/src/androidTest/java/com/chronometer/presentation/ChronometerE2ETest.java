@@ -1,17 +1,15 @@
 package com.chronometer.presentation;
 
-import static com.chronometer.utils.Constant.BTN_LAP;
-import static com.chronometer.utils.Constant.BTN_RESET;
-import static com.chronometer.utils.Constant.BTN_START;
-import static com.chronometer.utils.Constant.ERROR_LAP;
-import static com.chronometer.utils.Constant.ERROR_LAP_LIST;
-import static com.chronometer.utils.Constant.PACKAGE_NAME;
-import static com.chronometer.utils.Constant.RV_LAP;
-import static com.chronometer.utils.Constant.TIMEOUT;
-import static org.junit.Assert.assertNotNull;
-
 import android.content.Context;
 import android.content.Intent;
+
+import com.chronometer.presentation.view.ChronometerActivity;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
@@ -21,13 +19,15 @@ import androidx.test.uiautomator.UiDevice;
 import androidx.test.uiautomator.UiObject2;
 import androidx.test.uiautomator.Until;
 
-import com.chronometer.presentation.view.ChronometerActivity;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import static com.chronometer.utils.Constant.BTN_LAP;
+import static com.chronometer.utils.Constant.BTN_RESET;
+import static com.chronometer.utils.Constant.BTN_START;
+import static com.chronometer.utils.Constant.ERROR_LAP;
+import static com.chronometer.utils.Constant.ERROR_LAP_LIST;
+import static com.chronometer.utils.Constant.PACKAGE_NAME;
+import static com.chronometer.utils.Constant.RV_LAP;
+import static com.chronometer.utils.Constant.TIMEOUT;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(AndroidJUnit4.class)
 public class ChronometerE2ETest {
@@ -39,7 +39,8 @@ public class ChronometerE2ETest {
 
     @Before
     public void setUp() {
-        device = UiDevice.getInstance(androidx.test.platform.app.InstrumentationRegistry.getInstrumentation());
+        device = UiDevice.getInstance(
+                androidx.test.platform.app.InstrumentationRegistry.getInstrumentation());
 
         Context context = ApplicationProvider.getApplicationContext();
         Intent intent = context.getPackageManager().getLaunchIntentForPackage(PACKAGE_NAME);

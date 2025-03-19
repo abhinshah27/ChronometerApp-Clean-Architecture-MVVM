@@ -3,23 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_1e1e1e">
+    android:background="@color/charcoal"
+    android:fitsSystemWindows="true">
 
     <!-- Toolbar -->
-    <Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             style="@style/StopwatchTitleStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_stopwatch" />
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/menu_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,7 +29,7 @@
             android:padding="@dimen/_16dp"
             android:src="@drawable/ic_more"
             app:tint="@color/white" />
-    </Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <!-- Custom Chronometer -->
     <com.chronometer.presentation.view.CustomChronometerView
@@ -117,7 +118,7 @@
         android:layout_height="@dimen/_60dp"
         android:layout_marginHorizontal="@dimen/_40dp"
         android:layout_marginBottom="@dimen/_16dp"
-        android:background="@color/color_ebebeb"
+        android:background="@color/off_white"
         android:text="@string/label_start"
         android:textAllCaps="false"
         android:textColor="@color/black"

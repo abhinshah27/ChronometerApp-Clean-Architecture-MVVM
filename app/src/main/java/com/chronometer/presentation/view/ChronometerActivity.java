@@ -3,10 +3,6 @@ package com.chronometer.presentation.view;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.chronometer.R;
 import com.chronometer.data.analytics.FirebaseAnalyticsHelper;
 import com.chronometer.data.repository.ChronometerRepository;
@@ -20,6 +16,10 @@ import com.chronometer.presentation.viewmodel.ChronometerViewModel;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class ChronometerActivity extends AppCompatActivity {
 
@@ -92,7 +92,8 @@ public class ChronometerActivity extends AppCompatActivity {
             binding.customChronometer.stop();
             FirebaseAnalyticsHelper.logButtonTapEvent(this, getString(R.string.label_stop));
 
-            binding.btnBottomStart.setText(lapsAdapter.getItemCount() > 0 ? R.string.label_reset : R.string.label_start);
+            binding.btnBottomStart.setText(
+                    lapsAdapter.getItemCount() > 0 ? R.string.label_reset : R.string.label_start);
             binding.btnStart.setText(R.string.label_start);
             binding.btnLap.setVisibility(View.GONE);
             binding.btnReset.setVisibility(View.VISIBLE);

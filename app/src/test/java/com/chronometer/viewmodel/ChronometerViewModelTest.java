@@ -1,13 +1,5 @@
 package com.chronometer.viewmodel;
 
-import static org.junit.Assert.assertEquals;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
-
 import com.chronometer.domain.model.Lap;
 import com.chronometer.domain.repository.IChronometerRepository;
 import com.chronometer.domain.usecase.GetLapsUseCase;
@@ -26,11 +18,20 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
 @RunWith(MockitoJUnitRunner.class)
 public class ChronometerViewModelTest {
 
     @Rule
-    public InstantTaskExecutorRule instantTaskExecutorRule = new InstantTaskExecutorRule(); // For LiveData testing
+    public InstantTaskExecutorRule instantTaskExecutorRule = new InstantTaskExecutorRule();
+            // For LiveData testing
 
     @Mock
     private GetLapsUseCase getLapsUseCase;
