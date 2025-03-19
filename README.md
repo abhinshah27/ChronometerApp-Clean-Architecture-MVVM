@@ -16,14 +16,14 @@ operates in three states:
 
 - **First Lap**: Logs Lap 1 with the partial and total time equal to the chronometer time.
 - **Subsequent Laps**: Logs Lap `N`, where:
-    - **Partial Time** = Time recorded when pressing the lap button.
-    - **Total Time** = `Partial Time (N) + Total Time (N-1)`.
+  - **Partial Time** = Time recorded when pressing the lap button.
+  - **Total Time** = `Partial Time (N) + Total Time (N-1)`.
 
 ✅ **Analytics Tracking (Firebase Integration)**
 
 - **User Properties**:
-    - **Cohort**: Install date in `YYYYMMDD` format.
-    - **Usage**: Number of times the user transitions from `Start State → Running State`.
+  - **Cohort**: Install date in `YYYYMMDD` format.
+  - **Usage**: Number of times the user transitions from `Start State → Running State`.
 - **Event Tracking**: Logs an event whenever a button is tapped (`Start`, `Lap`, `Stop`, `Resume`).
 
 ## Architecture: MVVM + Clean
@@ -32,19 +32,19 @@ The app follows **MVVM (Model-View-ViewModel)** and **Clean Architecture** to en
 maintainability, and testability.
 
 - **Presentation Layer**:
-    - `ChronometerViewModel.java` (Handles UI logic)
-    - `ChronometerActivity.java` (View layer)
-    - `CustomChronometerView.java` (View layer)
-    - `LapsAdapter.java` (RecyclerView Adapter for laps)
+  - `ChronometerViewModel.java` (Handles UI logic)
+  - `ChronometerActivity.java` (View layer)
+  - `CustomChronometerView.java` (View layer)
+  - `LapsAdapter.java` (RecyclerView Adapter for laps)
 
 - **Domain Layer**:
-    - `Lap.java` (Model)
-    - `GetLapsUseCase.java` (Encapsulates business logic)
-    - `IChronometerRepository.java` (Interface for lap data operations)
+  - `Lap.java` (Model)
+  - `GetLapsUseCase.java` (Encapsulates business logic)
+  - `IChronometerRepository.java` (Interface for lap data operations)
 
 - **Data Layer**:
-    - `ChronometerRepository.java` (Implements `IChronometerRepository`)
-    - `FirebaseAnalyticsHelper.java` (Handles Firebase events)
+  - `ChronometerRepository.java` (Implements `IChronometerRepository`)
+  - `FirebaseAnalyticsHelper.java` (Handles Firebase events)
 
 ## Screenshots
 
@@ -56,13 +56,13 @@ maintainability, and testability.
 
 Unit tests are written using **JUnit** and **MockK**:
 
-- To execute Unit tests, use the following command in your Gradle task runner: **./gradlew testDebugUnitTest**
+- To execute Unit tests, use the following command in your Gradle task runner: `./gradlew testDebugUnitTest`
 
 ## End-to-End Testing
 
 E2E tests are written using **Espresso** and **UI Automator** :
 
-- To execute E2E tests, run the following command using the Gradle task runner: **./gradlew app:connectedDebugAndroidTest -i -Pandroid.testInstrumentationRunnerArguments.class=com.chronometer.presentation.ChronometerE2ETest**
+- To execute E2E tests, run the following command using the Gradle task runner: `./gradlew app:connectedDebugAndroidTest -i -Pandroid.testInstrumentationRunnerArguments.class=com.chronometer.presentation.ChronometerE2ETest`
 
 ## 🧪️ Dependency Injection (Hilt) - **Coming Soon** 🚀
 
