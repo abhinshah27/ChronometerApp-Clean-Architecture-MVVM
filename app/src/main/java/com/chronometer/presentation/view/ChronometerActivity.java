@@ -37,7 +37,12 @@ public class ChronometerActivity extends AppCompatActivity {
     }
 
     /**
-     * .
+     * Initializes the ChronometerActivity by setting up UI components, ViewModel, and event listeners.
+     * - Configures Firebase Analytics for tracking cohort properties.
+     * - Initializes the ChronometerViewModel with the necessary use case.
+     * - Sets up the RecyclerView for displaying lap times with a reverse order.
+     * - Observes lap data changes and updates the UI accordingly.
+     * - Registers event listeners for buttons (Start, Reset, Lap, and Bottom Start).
      */
     private void init() {
         FirebaseAnalyticsHelper.logCohortProperty(this);

@@ -3,15 +3,15 @@ package com.chronometer.presentation.adapter;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.chronometer.databinding.ItemLapBinding;
-import com.chronometer.domain.model.Lap;
-
-import java.util.Locale;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.chronometer.databinding.ItemLapBinding;
+import com.chronometer.domain.model.Lap;
+
+import java.util.Locale;
 
 public class LapsAdapter extends ListAdapter<Lap, LapsAdapter.LapViewHolder> {
 
@@ -24,8 +24,7 @@ public class LapsAdapter extends ListAdapter<Lap, LapsAdapter.LapViewHolder> {
     @Override
     public LapViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // Use ViewBinding to inflate the layout
-        ItemLapBinding binding = ItemLapBinding.inflate(LayoutInflater.from(parent.getContext()),
-                parent, false);
+        ItemLapBinding binding = ItemLapBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
         return new LapViewHolder(binding);
     }
 
@@ -58,8 +57,7 @@ public class LapsAdapter extends ListAdapter<Lap, LapsAdapter.LapViewHolder> {
             long seconds = (timeInMillis % 60000) / 1000;
             long milliseconds = (timeInMillis % 1000) / 10;
 
-            return String.format(Locale.getDefault(), "%02d:%02d:%02d.%02d", hours, minutes,
-                    seconds, milliseconds);
+            return String.format(Locale.getDefault(), "%02d:%02d:%02d.%02d", hours, minutes, seconds, milliseconds);
         }
     }
 
@@ -72,8 +70,7 @@ public class LapsAdapter extends ListAdapter<Lap, LapsAdapter.LapViewHolder> {
 
         @Override
         public boolean areContentsTheSame(@NonNull Lap oldItem, @NonNull Lap newItem) {
-            return oldItem.getPartialTime() == newItem.getPartialTime() &&
-                    oldItem.getTotalTime() == newItem.getTotalTime();
+            return oldItem.getPartialTime() == newItem.getPartialTime() && oldItem.getTotalTime() == newItem.getTotalTime();
         }
     }
 }

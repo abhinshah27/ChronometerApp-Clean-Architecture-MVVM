@@ -7,13 +7,13 @@ import android.os.SystemClock;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 
-import com.chronometer.R;
-
-import java.text.DecimalFormat;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.chronometer.R;
+
+import java.text.DecimalFormat;
 
 public class CustomChronometerView extends ConstraintLayout {
 

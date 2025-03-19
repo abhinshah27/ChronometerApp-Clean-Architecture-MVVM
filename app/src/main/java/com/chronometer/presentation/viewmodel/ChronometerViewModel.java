@@ -1,14 +1,14 @@
 package com.chronometer.presentation.viewmodel;
 
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
+
 import com.chronometer.domain.model.Lap;
 import com.chronometer.domain.usecase.GetLapsUseCase;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 
 public class ChronometerViewModel extends ViewModel {
 
