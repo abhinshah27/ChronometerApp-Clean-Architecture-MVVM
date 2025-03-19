@@ -1,0 +1,162 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Hour Time -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_hour_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_70sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_hour_dot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0" />
+
+    <!-- Hour Dot -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_hour_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/label_double_dot"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_hour_time"
+        app:layout_constraintEnd_toStartOf="@id/tv_minute_time"
+        app:layout_constraintStart_toEndOf="@+id/tv_hour_time"
+        app:layout_constraintTop_toTopOf="@id/tv_hour_time" />
+
+    <!-- Hour Label -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16dp"
+        android:gravity="center"
+        android:text="@string/label_hours"
+        android:textColor="@color/color_939393"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_hour_dot"
+        app:layout_constraintTop_toBottomOf="@id/tv_hour_time" />
+
+    <!-- Minute Time -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_minute_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_70sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_minute_dot"
+        app:layout_constraintStart_toEndOf="@+id/tv_hour_dot"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="00" />
+
+    <!-- Minute Dot -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_minute_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/label_double_dot"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_minute_time"
+        app:layout_constraintEnd_toStartOf="@id/tv_second_time"
+        app:layout_constraintStart_toEndOf="@+id/tv_minute_time"
+        app:layout_constraintTop_toTopOf="@id/tv_minute_time" />
+
+    <!-- Minute Label -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_mins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16dp"
+        android:gravity="center"
+        android:text="@string/label_mins"
+        android:textColor="@color/color_939393"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_minute_dot"
+        app:layout_constraintTop_toBottomOf="@id/tv_minute_time" />
+
+    <!-- Second Time -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_second_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_70sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_second_dot"
+        app:layout_constraintStart_toEndOf="@+id/tv_minute_dot"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="00" />
+
+    <!-- Second Dot -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_second_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/label_dot"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_second_time"
+        app:layout_constraintEnd_toStartOf="@id/tv_milliseconds_time"
+        app:layout_constraintStart_toEndOf="@+id/tv_second_time"
+        app:layout_constraintTop_toTopOf="@id/tv_second_time" />
+
+    <!-- Second Label -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_secs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16dp"
+        android:gravity="center"
+        android:text="@string/label_secs"
+        android:textColor="@color/color_939393"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_second_dot"
+        app:layout_constraintTop_toBottomOf="@id/tv_second_time" />
+
+    <!-- Milliseconds Time -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_milliseconds_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_second_dot"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="9" />
+
+    <!-- Milliseconds Label -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_mili"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_4dp"
+        android:gravity="end"
+        android:text="@string/label_1_10"
+        android:textColor="@color/color_939393"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_milliseconds_time"
+        app:layout_constraintTop_toBottomOf="@id/tv_milliseconds_time" />
+</androidx.constraintlayout.widget.ConstraintLayout>

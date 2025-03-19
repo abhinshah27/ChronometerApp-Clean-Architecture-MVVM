@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Chronometer</string>
+    <string name="label_stopwatch">Stopwatch</string>
+    <string name="label_reset">Reset</string>
+    <string name="label_start">Start</string>
+    <string name="label_resume">Resume</string>
+    <string name="label_lap">LAP</string>
+    <string name="label_stop">STOP</string>
+    <string name="label_running">Running</string>
+    <string name="label_double_dot">:</string>
+    <string name="label_dot">.</string>
+    <string name="label_hours">hours</string>
+    <string name="label_mins">mins</string>
+    <string name="label_secs">secs</string>
+    <string name="label_1_10">1/10</string>
+    <string name="label_menu">menu</string>
+</resources>

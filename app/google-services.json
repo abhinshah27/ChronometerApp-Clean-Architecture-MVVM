@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "163779138446",
+    "project_id": "chronometer-30a54",
+    "storage_bucket": "chronometer-30a54.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163779138446:android:23b06c88133770339acadf",
+        "android_client_info": {
+          "package_name": "com.chronometer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVQpTir8XuouAwQm2CybCwFTtHSuqPQz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

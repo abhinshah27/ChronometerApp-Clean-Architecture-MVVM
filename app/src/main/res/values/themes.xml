@@ -1,0 +1,21 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Chronometer" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/black</item>
+    </style>
+
+    <style name="Theme.Chronometer" parent="Base.Theme.Chronometer" />
+
+    <style name="StopwatchButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/color_414141</item>
+        <item name="android:textColor">@color/color_dedede</item>
+        <item name="android:textSize">@dimen/_20sp</item>
+    </style>
+
+    <!-- Text Style for Stopwatch Title -->
+    <style name="StopwatchTitleStyle" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/_20sp</item>
+    </style>
+
+</resources>
